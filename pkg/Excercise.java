@@ -8,7 +8,4 @@ public class Excercise {
 		LEGS
 	}
 
-	public void SetRoutine(Routine routine) {
-		Routine this.routine = Routine.routine
 }	
-

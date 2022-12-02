@@ -1,5 +1,5 @@
 import java.lang.Math;
-//import pkg.Excercise;
+import pkg.Person;
 
 
 public class Main {
@@ -24,6 +24,8 @@ public class Main {
 	
 
 	public static void main(String[] args) {
+		Person Tanner = new Person()
+
 		final float CONST_GRAVITY = 9.80665f;
 		
 		//Body Measurements:
