@@ -12,8 +12,10 @@ public class Main {
 	
 
 	public static void main(String[] args) {
+
+		//get body measurements again.
 		Person Tanner = new Person();
-		System.out.println();
+		System.out.println(Tanner);
 	}
 
 }
