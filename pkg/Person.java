@@ -3,31 +3,38 @@ package pkg;
 import pkg.Calculations;
 
 public class Person {
-	//Body Measurements:
-	double HEIGHT;
-	double WEIGHT;
-	double HUMERUS_LENGTH;
-	double ULNA_LENGTH;
-	double FEMUR_LENGTH;
-	double TIBIA_LENGTH;
-	double TORSO_LENGTH;
-	double ARM_LENGTH;
-	double LEG_LENGTH;
-	double OVRHEAD_LENGTH;
+	private String name;
 
+	// Broad Measurements:
+	private double height, weight;
+	private double humerusLen, ulnaLen, femurLen, tibiaLen, torsoLen;
+	// Compound Measurements
+	private double armLen, legLen, ovrHeadLen;
 
-	public void Person(double height, double weight, double humerus, double ulna, double femur, double tibia, double torso) {
-		HEIGHT = Calculations.convertToCm(height);
-		double WEIGHT= Calculations.convertToKg(weight);
+	public Person() {
+	}
 
-		HUMERUS_LENGTH = Calculations.convertToCm(humerus);
-		ULNA_LENGTH = Calculations.convertToCm(ulna);
-		FEMUR_LENGTH = Calculations.convertToCm(femur);
-		TIBIA_LENGTH = Calculations.convertToCm(tibia);
-		TORSO_LENGTH = Calculations.convertToCm(torso);
-		LEG_LENGTH = FEMUR_LENGTH + TIBIA_LENGTH;
-		ARM_LENGTH = ULNA_LENGTH + HUMERUS_LENGTH;
-		OVRHEAD_LENGTH = LEG_LENGTH + ARM_LENGTH + TORSO_LENGTH;
+	public Person(String personName, double hgt, double wgt, double humerus, double ulna, double femur, double tibia, double torso) {
+		name = personName;
+
+		height = Calculations.convertToCm(hgt);
+		weight= Calculations.convertToKg(wgt);
+
+		humerusLen = Calculations.convertToCm(humerus);
+		ulnaLen = Calculations.convertToCm(ulna);
+		femurLen = Calculations.convertToCm(femur);
+		tibiaLen = Calculations.convertToCm(tibia);
+		torsoLen = Calculations.convertToCm(torso);
+		legLen = femurLen + tibiaLen;
+		armLen = ulnaLen + humerusLen;
+		ovrHeadLen = legLen + armLen + torsoLen;
+	}
+
+	public void PrintValues() {
+		System.out.println(this.name + "'s Profile:");
+		System.out.println("Arm lenght: " + this.armLen);
+		System.out.println("Leg Length" + this.legLen);
+		System.out.println("Overhead reach length: " + this.ovrHeadLen);
 	}
 		
 }

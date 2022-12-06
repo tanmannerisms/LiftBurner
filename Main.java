@@ -1,7 +1,4 @@
-import java.lang.Math;
 import pkg.Person;
-import pkg.Calculations;
-
 
 public class Main {
 	// Calculate work done for moving mass certain distance.
@@ -14,8 +11,8 @@ public class Main {
 	public static void main(String[] args) {
 
 		//get body measurements again.
-		Person Tanner = new Person();
-		System.out.println(Tanner);
+		Person Tanner = new Person("Tanner", 74, 186, 20, 20, 20, 20, 24);
+		Tanner.PrintValues();
 	}
 
 }
