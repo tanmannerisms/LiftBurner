@@ -33,7 +33,7 @@ public class Person {
 	public void PrintValues() {
 		System.out.println(this.name + "'s Profile:");
 		System.out.println("Arm lenght: " + this.armLen);
-		System.out.println("Leg Length" + this.legLen);
+		System.out.println("Leg Length: " + this.legLen);
 		System.out.println("Overhead reach length: " + this.ovrHeadLen);
 	}
 		
