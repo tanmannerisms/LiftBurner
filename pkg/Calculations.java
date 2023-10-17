@@ -14,8 +14,15 @@ public class Calculations {
 		return (lbs * LBS_TO_KG);
 	}
 
-	public static double getMoment(double length, double distance) {
-		return (length * distance);
+	/**
+	 * Get the moment of the specified weight and length. Used for further calculations of energy expended.
+	 * @param weight A double specifying the weight in kilograms.
+	 * @param length A double specifying the length of the arm in centimeters.
+	 * @return A double representing the moment of the weight and length in Joules/Newton meters.
+	 */
+	public static double getMoment(double weight, double length) {
+		// Going to need to add in the SINE of the angle eventually...
+		return (weight * GRAVITY * length * 100);
 	}
 
 	
